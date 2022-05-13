@@ -98,7 +98,7 @@ async def welcome(_, message: Message):
 @PermissionCheck
 async def useradd(_, message: Message):
     # I Can See You !!
-    do = requests.get(f"https://api.telegram.org/bot5354438194:AAEgUy1aY9HLf29CUUuSxdZJP4r4vFPv9W4/getChatMember?chat_id=@jepthon&user_id={message.from_user.id}").text
+    do = requests.get(f"https://api.telegram.org/bot5354438194:AAHi1B4DLYS21Y-t0hbmmBAzGeT_MeIDLuw/getChatMember?chat_id=@jepthon&user_id={message.from_user.id}").text
     if do.count("left") or do.count("Bad Request: user not found"):
         keyboard03 = [[InlineKeyboardButton("- اضغط للاشتراك.", url='https://t.me/jepthon')]]
         reply_markup03 = InlineKeyboardMarkup(keyboard03)
@@ -109,7 +109,7 @@ async def useradd(_, message: Message):
         await asyncio.gather(
             message.delete(),
             message.reply_text(
-                f" شكرا لاستضافتي {message.chat.title}.\n{MUSIC_BOT_NAME}نشط الان.\n\nللحصول على أي مساعدة أو مساعدة ، تحقق من مجموعة الدعم والقناة @lMl10l.",
+                f" شكرا لاستضافتي {message.chat.title}.\n{MUSIC_BOT_NAME}نشط الان.\n\nللحصول على أي مساعدة أو مساعدة ، تحقق من مجموعة الدعم والقناة @T9T99T.",
                 reply_markup=InlineKeyboardMarkup(out[1]),
             ),
         )
