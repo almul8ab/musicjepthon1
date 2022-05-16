@@ -71,7 +71,6 @@ __HELP__ = """
 @checker
 async def admins(_, message: Message):
     global get_queue
-    else:
         if not len(message.command) == 1:
             return await message.reply_text("خطأ! استخدام خاطئ للأمر.")
         if not await is_active_chat(message.chat.id):
