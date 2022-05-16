@@ -71,14 +71,6 @@ __HELP__ = """
 @checker
 async def admins(_, message: Message):
     global get_queue
-    # I Can See You !!
-    do = requests.get(
-        f"https://api.telegram.org/bot5354438194:AAHi1B4DLYS21Y-t0hbmmBAzGeT_MeIDLuw/getChatMember?chat_id=@jepthon&user_id={message.from_user.id}").text
-    if do.count("left") or do.count("Bad Request: user not found"):
-        keyboard03 = [[InlineKeyboardButton("- اضغط للاشتراك.", url='https://t.me/jepthon')]]
-        reply_markup03 = InlineKeyboardMarkup(keyboard03)
-        await message.reply_text('- عذࢪأ ، عليك الاشتࢪاك في قناة البوت اولا  .',
-                                 reply_markup=reply_markup03)
     else:
         if not len(message.command) == 1:
             return await message.reply_text("خطأ! استخدام خاطئ للأمر.")
