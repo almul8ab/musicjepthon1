@@ -66,6 +66,7 @@ __HELP__ = """
 @app.on_message(
     filters.command(["pause", "skip", "resume", "stop", "end"])
     & filters.group
+)
 @AdminRightsCheck
 @checker
 async def admins(_, message: Message):
